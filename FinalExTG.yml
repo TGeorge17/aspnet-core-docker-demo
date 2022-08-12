@@ -17,6 +17,9 @@ stages:
     - script: terraform apply -refresh-only -auto-approve 
       displayName: 'Terraform apply'
 
+    - script: az login --service-principal -u tgeorgecr  -p bK+9i7+qn0CBDyogSjB=7vGOm3hxtmD7  --tenant a047dbfb-d5eb-47f3-8d21-381786ab6c80
+      displayName: 'Login to Azure'
+
     - script: az account show
       displayName: 'account show'
 
