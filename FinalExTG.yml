@@ -11,8 +11,8 @@ stages:
   jobs:
   - job: DeployWithTerraform
     steps:
-    - script: terraform main.tf init
+    - script: terraform init
       displayName: 'Terraform init'
 
-    - script: terraform main.tf apply -refresh-only -auto-approve 
+    - script: terraform apply -refresh-only -auto-approve 
       displayName: 'Terraform apply'
