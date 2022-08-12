@@ -11,8 +11,8 @@ stages:
   jobs:
   - job: DeployWithTerraform
     steps:
-    - script: terraform -chdir=terraform-george init
+    - script: terraform main.tf init
       displayName: 'Terraform init'
 
-    - script: terraform -chdir=terraform-george apply -refresh-only -auto-approve 
+    - script: terraform main.tf apply -refresh-only -auto-approve 
       displayName: 'Terraform apply'
