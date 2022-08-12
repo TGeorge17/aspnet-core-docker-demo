@@ -14,7 +14,7 @@ stages:
     - script: terraform init
       displayName: 'Terraform init'
 
-    - script: terraform apply  -auto-approve 
+    - script: terraform apply -refresh-only -auto-approve 
       displayName: 'Terraform apply'
 
     - script: az account show
